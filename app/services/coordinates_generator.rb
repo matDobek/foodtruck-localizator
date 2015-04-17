@@ -8,7 +8,7 @@ class CoordinatesGenerator
 
   def call
     output = JSON.parse(HTTParty.get(request_url).body)
-    return nil if output['status'] == 'ZERO_RESULTS'
+    return {} if output['status'] == 'ZERO_RESULTS'
     coordinates(output)
   end
 
@@ -19,9 +19,10 @@ class CoordinatesGenerator
   def coordinates(input)
     first_result = input['results'][0]
     location = first_result['geometry']['location']
-    lat = location['lat']
-    lng = location['lng']
-    formatted = first_result['formatted_address']
-    [lat, lng, formatted]
+    result = {}
+    result[:latitude] = location['lat']
+    result[:longitude] = location['lng']
+    result[:address] = first_result['formatted_address']
+    result
   end
 end
