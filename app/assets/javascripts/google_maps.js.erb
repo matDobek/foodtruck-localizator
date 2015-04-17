@@ -12,14 +12,13 @@ handler.buildMap({
 },
 
 function(){
-  //markers = handler.addMarkers(foodtrucks);
-  markers = handler.addMarkers(
-<%= Foodtruck.all_with_coordinates %>
-  );
+  markers = handler.addMarkers(eval(foodtrucks));
   handler.bounds.extendWith(markers);
   handler.fitMapToBounds();
 });
 });
+
+
                 var customMapStyle = [{
                   "featureType":"all",
                   "elementType":"labels.text.fill",
