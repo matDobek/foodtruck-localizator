@@ -3,7 +3,6 @@ foodtrucks = $("#foodtrucks").data("foodtrucks")
 handler = Gmaps.build('Google');
 handler.buildMap({
   provider: {
-    disableDefaultUI: true,
     styles: customMapStyle,
     zoom: 1
   },
@@ -12,18 +11,8 @@ handler.buildMap({
   }
 },
 function(){
-  markers = handler.addMarkers([
-    {
-    "lat": 54.30,
-    "lng": 18.12,
-    "infowindow": "Surfburger"
-  },
-    {
-      "lat": 58.20,
-      "lng": 22.20,
-      "infowindow": "Carmnik"
-    }
-  ]);
+  debugger
+  markers = handler.addMarkers(foodtrucks);
   handler.bounds.extendWith(markers);
   handler.fitMapToBounds();
 });
