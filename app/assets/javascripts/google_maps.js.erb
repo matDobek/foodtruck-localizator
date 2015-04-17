@@ -10,9 +10,12 @@ handler.buildMap({
     id: 'map'
   }
 },
+
 function(){
-  debugger
-  markers = handler.addMarkers(foodtrucks);
+  //markers = handler.addMarkers(foodtrucks);
+  markers = handler.addMarkers(
+<%= Foodtruck.all_with_coordinates %>
+  );
   handler.bounds.extendWith(markers);
   handler.fitMapToBounds();
 });
