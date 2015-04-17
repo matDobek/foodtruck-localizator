@@ -8,6 +8,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'koala', '~> 2.0'
+gem 'dotenv-rails'
 
 group :development, :test do
   gem 'byebug'
