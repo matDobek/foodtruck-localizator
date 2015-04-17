@@ -5,7 +5,7 @@ class UpdateFoodtrucksLocation
     Foodtruck.all.each do |foodtruck|
       message = fetcher.call(foodtruck.id)
       address = AddressExtractor.new(message).call
-      coordinates = CoordinatesGenerator.new(address).call
+      coordinates = CoordinatesGenerator.new(address, foodtruck.city).call
 
       foodtruck.update(
         latitude: coordinates[:latitude],
