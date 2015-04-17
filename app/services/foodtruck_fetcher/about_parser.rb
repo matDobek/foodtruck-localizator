@@ -10,7 +10,7 @@ module FoodtruckFetcher
       {
         latitude: location[:latitude],
         longitude: location[:longitude],
-        address: "#{location[:street]} , #{location[:city]}"
+        address: "#{location[:street]}, #{location[:city]}"
       }
     end
 
