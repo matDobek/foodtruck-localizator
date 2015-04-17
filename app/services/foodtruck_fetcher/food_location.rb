@@ -1,8 +1,9 @@
 module FoodtruckFetcher
   class FoodLocation
-    def call(foodtruck_id)
-      foodtruck = Foodtruck.find_by(id: foodtruck_id) or return
-      message_for(foodtruck.endpoint_data)
+    def call(foodtruck_name)
+      message = message_for(foodtruck.endpoint_data)
+      address = AddressExtractor.new(message).call
+      CoordinatesGenerator.new(address, foodtruck.city).call
     end
 
     private
@@ -11,8 +12,8 @@ module FoodtruckFetcher
       @request ||= Request.new
     end
 
-    def message_for(foodtruck)
-      response = request.today_posts_for(foodtruck)
+    def message_for(foodtruck_name)
+      response = request.today_posts_for(foodtruck_name)
       Parser.new(response).message
     end
   end

@@ -7,6 +7,11 @@ module FoodtruckFetcher
       }
     end
 
+    def about(foodtruckt_name)
+      #clinet.get_object 'MusztardaTruck'
+      clinet.get_object foodtruckt_name
+    end
+
     private
 
     def access_token
