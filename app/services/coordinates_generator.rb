@@ -8,6 +8,7 @@ class CoordinatesGenerator
 
   def call
     output = JSON.parse(HTTParty.get(request_url).body)
+    sleep 0.2
     return {} if output['status'] == 'ZERO_RESULTS'
     coordinates(output)
   end
