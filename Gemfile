@@ -17,6 +17,7 @@ gem 'haml-rails'
 gem 'high_voltage'
 gem 'pg'
 group :development do
+  gem 'annotate'
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
   gem 'html2haml'
