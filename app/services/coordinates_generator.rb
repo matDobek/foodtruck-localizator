@@ -1,8 +1,9 @@
 class CoordinatesGenerator
   attr_reader :address, :api_key
 
-  def initialize(address)
-    @address = CGI.escape(address)
+  def initialize(address, city = nil)
+    @city = city
+    @address = CGI.escape([city, address].compact.join(' '))
     @api_key = ENV['GOOGLE_GEOCODER_KEY']
   end
 
