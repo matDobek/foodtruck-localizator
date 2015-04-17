@@ -17,7 +17,7 @@ class Foodtruck < ActiveRecord::Base
 
   def self.all_with_coordinates
    trucks = Foodtruck.all.map do |f|
-     "{ lat: #{f.latitude}, lng: #{f.longitude} }"
+     "{ lat: #{f.latitude}, lng: #{f.longitude}, infowindow: \"#{f.name}\" }"
    end.join(',')
    "[#{trucks}]"
   end
