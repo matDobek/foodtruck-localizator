@@ -1,5 +1,5 @@
 $( document ).ready(function(){
-foodtrucks = $("#foodtrucks").data("foodtrucks")
+foodtrucks =$("#foodtrucks").data("foodtrucks")
 handler = Gmaps.build('Google');
 handler.buildMap({
   provider: {
