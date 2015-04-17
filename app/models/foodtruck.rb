@@ -13,6 +13,8 @@
 #
 
 class Foodtruck < ActiveRecord::Base
+  enum endpoint_type: [ :facebook_wall, :facebook_about ]
+
   def self.all_with_coordinates
    Foodtruck.all.map do |f|
      {lat: f.latitude, lng: f.longitude}
