@@ -8,8 +8,7 @@ module FoodtruckFetcher
     end
 
     def about(foodtruckt_name)
-      #clinet.get_object 'MusztardaTruck'
-      clinet.get_object foodtruckt_name
+      client.get_object foodtruckt_name
     end
 
     private
