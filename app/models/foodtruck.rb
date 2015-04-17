@@ -13,4 +13,7 @@
 #
 
 class Foodtruck < ActiveRecord::Base
+  def self.all_with_coordinates
+   Foodtruck.all.map { |f| {lat: f.latitude, lng: f.longitude, infowindow: f.name} }
+  end
 end
