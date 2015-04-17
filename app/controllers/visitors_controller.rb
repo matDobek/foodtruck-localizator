@@ -1,5 +1,5 @@
 class VisitorsController < ApplicationController
   def index
-    UpdateFoodtrucksLocation.new.call
+    #UpdateFoodtrucksLocation.new.call
   end
 end
