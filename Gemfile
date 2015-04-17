@@ -7,11 +7,14 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
+gem 'koala', '~> 2.0'
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end
+
 gem 'bootstrap-sass'
 gem 'haml-rails'
 gem 'high_voltage'
@@ -24,6 +27,7 @@ group :development do
   gem 'quiet_assets'
   gem 'rails_layout'
 end
+
 group :production do
   gem 'rails_12factor'
 end
