@@ -1,10 +1,10 @@
 module FoodtruckFetcher
-  class Parser
+  class MessageParser
     def initialize(response)
       @response = response
     end
 
-    def message
+    def parse
       oldest_post.fetch(:message) { '' }
     end
 
