@@ -16,6 +16,7 @@ gem 'rails', '4.2.0'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'underscore-rails'
+gem 'puma'
 
 group :development, :test do
   gem 'byebug'
@@ -35,5 +36,4 @@ end
 
 group :production do
   gem 'rails_12factor'
-  gem 'unicorn'
 end
