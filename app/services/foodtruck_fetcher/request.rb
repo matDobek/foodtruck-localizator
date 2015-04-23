@@ -15,8 +15,8 @@ module FoodtruckFetcher
 
     def access_token
       @access_token ||= Koala::Facebook::OAuth.new(
-        ENV['facebook_app_id'],
-        ENV['facebook_app_secret']
+        ENV['FACEBOOK_APP_ID'],
+        ENV['FACEBOOK_APP_SECRET']
       ).get_app_access_token
     end
 
