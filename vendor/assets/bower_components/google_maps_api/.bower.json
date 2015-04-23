@@ -1,0 +1,10 @@
+{
+  "name": "google_maps_api",
+  "_cacheHeaders": {
+    "Content-Type": "text/javascript; charset=UTF-8"
+  },
+  "main": "index",
+  "_source": "http://maps.google.com/maps/api/js?v=3.13&amp;sensor=false&amp;libraries=geometry",
+  "_target": "*",
+  "_originalSource": "http://maps.google.com/maps/api/js?v=3.13&amp;sensor=false&amp;libraries=geometry"
+}

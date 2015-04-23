@@ -1,0 +1,14 @@
+{
+  "name": "google_maps_utility",
+  "_cacheHeaders": {
+    "ETag": "\"374//tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js\"",
+    "Last-Modified": "Wed, 16 May 2012 14:49:39 GMT",
+    "Content-Length": "10048",
+    "Content-Type": "text/javascript"
+  },
+  "_release": "e-tag:374//tags",
+  "main": "index.js",
+  "_source": "http://google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js",
+  "_target": "*",
+  "_originalSource": "http://google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js"
+}
