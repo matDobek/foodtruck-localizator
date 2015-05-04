@@ -3,7 +3,7 @@ Foodtrack Localizator
 
 TBD
 
-Bower handy commends
+Bower handy commands
 ---
 rake bower:install
 rake bower:update
